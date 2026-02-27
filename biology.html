@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>What If? – Biology</title>
+<title>Biology | Curious Minds</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 body {
@@ -12,7 +13,7 @@ body {
   color: white;
 }
 
-/* ---------- HEADER ---------- */
+/* HEADER */
 header {
   background: #041f16;
   padding: 20px;
@@ -33,117 +34,52 @@ nav a:hover {
   color: black;
 }
 
-/* ---------- CONTAINER ---------- */
+/* CONTAINER */
 .container {
-  padding: 30px 20px;
-}
-
-/* ---------- FEATURED QUESTION ---------- */
-.featured {
+  padding: 40px 20px;
   max-width: 900px;
   margin: auto;
-  background: white;
-  color: black;
-  padding: 25px;
-  border-radius: 18px;
+}
+
+/* SECTION TITLE */
+h2 {
   text-align: center;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+  margin-bottom: 30px;
 }
 
-.featured h2 {
-  margin-bottom: 10px;
-}
-
-.featured p {
-  font-size: 0.95rem;
-}
-
-button {
-  margin-top: 10px;
-  padding: 10px 18px;
-  border-radius: 20px;
-  border: none;
-  background: #0b3d2e;
-  color: white;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-button:hover {
-  background: #146c52;
-}
-
-/* ---------- CARDS ---------- */
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 25px;
-  justify-content: center;
-  margin-top: 40px;
-}
-
-.flip-card {
-  width: 280px;
-  height: 320px;
-  perspective: 1000px;
-}
-
-.flip-inner {
-  width: 100%;
-  height: 100%;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
-
-.flip-card:hover .flip-inner {
-  transform: rotateY(180deg);
-}
-
-.front, .back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  border-radius: 16px;
-  padding: 20px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-}
-
-.front {
-  background: linear-gradient(135deg, #2d6a4f, #1b4332);
-  text-align: center;
+/* TOPIC LIST */
+.topic-list {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  gap: 20px;
 }
 
-.front p {
-  opacity: 0.85;
-  font-style: italic;
-}
-
-.back {
+/* TOPIC CARD */
+.topic {
   background: white;
   color: black;
-  transform: rotateY(180deg);
-  overflow-y: auto;
+  padding: 20px;
+  border-radius: 15px;
+  text-decoration: none;
+  transition: 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
-.back h4 {
-  margin-bottom: 6px;
-  color: #1b4332;
+.topic:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.4);
 }
 
-.badge {
-  margin-top: 10px;
-  padding-top: 6px;
-  border-top: 1px solid #ccc;
-  font-size: 0.75rem;
-  color: #555;
-  text-align: center;
+.topic h3 {
+  margin: 0 0 8px 0;
 }
 
-/* ---------- FOOTER ---------- */
+.topic p {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* FOOTER */
 footer {
   background: #041f16;
   text-align: center;
@@ -151,17 +87,13 @@ footer {
   margin-top: 40px;
   font-size: 0.8rem;
 }
-
-@media (max-width: 600px) {
-  .flip-card { width: 90%; }
-}
 </style>
 </head>
 
 <body>
 
 <header>
-  <h1>What If? – Biology</h1>
+  <h1>Biology</h1>
   <nav>
     <a href="index.html">Home</a>
   </nav>
@@ -169,91 +101,30 @@ footer {
 
 <div class="container">
 
-  <div class="topic-button">
-    <a href="what-if-humans-stopped-aging.html" class="btn">
-        What If Humans Stopped Aging?
-    </a>
-  </div>
-  
-<!-- FEATURED QUESTION -->
-<div class="featured">
-  <h2 id="fq-title"></h2>
-  <p id="fq-know"></p>
-  <p id="fq-unknown"></p>
-  <button onclick="randomQuestion()">🔁 Show another question</button>
-  <p style="font-size:0.75rem;margin-top:10px;">
-    Changes automatically every minute
-  </p>
-</div>
+  <h2>Explore Biological What-If Questions</h2>
 
-<!-- FLIP CARDS -->
-<div class="cards" id="cards"></div>
+  <div class="topic-list">
+
+    <a href="biology/what-if-humans-stopped-aging.html" class="topic">
+      <h3>What If Humans Stopped Aging?</h3>
+      <p>Explore the biological, social, and evolutionary consequences of stopping the aging process.</p>
+    </a>
+
+    <!-- Add more topics below like this -->
+
+    <a href="biology/what-if-all-animals-could-photosynthesize.html" class="topic">
+  <h3>What If All Animals Could Photosynthesize?</h3>
+  <p>Imagine a world where animals make their own food using sunlight like plants.</p>
+  </a>
+    -->
+
+  </div>
 
 </div>
 
 <footer>
   Based on current biological understanding 🧬
 </footer>
-
-<script>
-const questions = [
-{q:"What if humans stopped aging?",k:"Aging is driven by cellular damage.",u:"Whether it can be fully halted."},
-{q:"What if cells could repair all DNA damage?",k:"Cells repair DNA imperfectly.",u:"Limits of perfect repair."},
-{q:"What if humans could regenerate organs?",k:"Some animals regenerate tissues.",u:"Why humans lost this ability."},
-{q:"What if evolution stopped today?",k:"Evolution depends on mutation.",u:"Long-term consequences."},
-{q:"What if memories were stored outside the brain?",k:"Memory involves neural networks.",u:"Alternative storage mechanisms."},
-{q:"What if humans could photosynthesize?",k:"Plants convert light to energy.",u:"Feasibility in animals."},
-{q:"What if viruses disappeared?",k:"Viruses influence evolution.",u:"Impact on ecosystems."},
-{q:"What if genes could be rewritten safely?",k:"Gene editing exists (CRISPR).",u:"Ethical and biological limits."},
-{q:"What if consciousness is not biological?",k:"Brain activity correlates with mind.",u:"Non-biological awareness."},
-{q:"What if all cells were immortal?",k:"Cell death maintains balance.",u:"Cancer-like consequences."},
-{q:"What if sleep wasn’t required?",k:"Sleep restores brain function.",u:"A sleepless biology."},
-{q:"What if pain didn’t exist?",k:"Pain protects organisms.",u:"Survival without warning."},
-{q:"What if humans had perfect memory?",k:"Memory is reconstructive.",u:"Psychological effects."},
-{q:"What if microbes vanished?",k:"Microbiome supports life.",u:"Human survival without microbes."},
-{q:"What if organs communicated directly?",k:"Hormones enable communication.",u:"Instant organ signaling."},
-{q:"What if evolution was goal-driven?",k:"Evolution lacks foresight.",u:"Directed evolution evidence."},
-{q:"What if death was optional?",k:"Death recycles resources.",u:"Population balance."},
-{q:"What if brains worked at 100%?",k:"Brains already use full capacity.",u:"Meaning of ‘unused brain’."},
-{q:"What if emotions were removable?",k:"Emotions guide behavior.",u:"Decision-making without emotion."},
-{q:"What if life exists without cells?",k:"All known life is cellular.",u:"Alternative life forms."}
-];
-
-const cardsDiv = document.getElementById("cards");
-
-questions.forEach(q=>{
-  cardsDiv.innerHTML += `
-  <div class="flip-card">
-    <div class="flip-inner">
-      <div class="front">
-        <h3>${q.q}</h3>
-        <p>Think biologically</p>
-      </div>
-      <div class="back">
-        <h4>What we know</h4>
-        <p>${q.k}</p>
-        <h4>What we don’t know</h4>
-        <p>${q.u}</p>
-        <div class="badge">Reviewed through biological science</div>
-      </div>
-    </div>
-  </div>`;
-});
-
-// Featured question logic
-function showFeatured(i){
-  document.getElementById("fq-title").innerText = questions[i].q;
-  document.getElementById("fq-know").innerText = "What we know: " + questions[i].k;
-  document.getElementById("fq-unknown").innerText = "What we don’t know: " + questions[i].u;
-}
-
-function randomQuestion(){
-  showFeatured(Math.floor(Math.random()*questions.length));
-}
-
-const minuteIndex = new Date().getMinutes() % questions.length;
-showFeatured(minuteIndex);
-</script>
 
 </body>
 </html>
