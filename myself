@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sahil | Personal Philosophy</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family: Arial, Helvetica, sans-serif;
+background:#0f172a;
+color:#e2e8f0;
+line-height:1.6;
+}
+
+/* Header */
+
+header{
+text-align:center;
+padding:80px 20px;
+background:linear-gradient(135deg,#1e293b,#020617);
+}
+
+header h1{
+font-size:48px;
+letter-spacing:2px;
+margin-bottom:10px;
+}
+
+.quote{
+font-style:italic;
+color:#94a3b8;
+font-size:18px;
+}
+
+/* Container */
+
+.container{
+max-width:900px;
+margin:auto;
+padding:20px;
+}
+
+/* Cards */
+
+.card{
+background:#1e293b;
+margin:40px auto;
+padding:30px;
+border-radius:12px;
+box-shadow:0 10px 30px rgba(0,0,0,0.4);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+h2{
+color:#38bdf8;
+margin-bottom:15px;
+}
+
+ul{
+padding-left:20px;
+}
+
+li{
+margin-bottom:10px;
+}
+
+.highlight{
+font-weight:bold;
+color:#22c55e;
+font-size:18px;
+}
+
+/* Links */
+
+a{
+color:#38bdf8;
+text-decoration:none;
+}
+
+a:hover{
+text-decoration:underline;
+}
+
+/* Footer */
+
+footer{
+text-align:center;
+padding:30px;
+margin-top:40px;
+font-size:14px;
+color:#94a3b8;
+border-top:1px solid #334155;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Sahil</h1>
+<p class="quote">“Sahil — the calm edge where chaos ends and balance begins.”</p>
+</header>
+
+<div class="container">
+
+<section class="card">
+<h2>About Me</h2>
+
+<p>Hello! My name is <strong>Sahil</strong>.</p>
+
+<p>
+I am a student who is passionate about science, learning new ideas,
+and improving myself every day. My goal is to become strong in scientific
+thinking and use knowledge to help others understand the world better.
+</p>
+
+<p>
+I also enjoy building websites, exploring ideas, and sharing knowledge
+with curious minds.
+</p>
+
+</section>
+
+<section class="card">
+<h2>Meaning of My Name</h2>
+
+<p>
+The name <strong>Sahil</strong> means a <em>shore</em> or <em>coastline</em>.
+</p>
+
+<p>
+Symbolically, it represents the place where chaos meets stability —
+like the shoreline where powerful ocean waves meet steady land.
+</p>
+
+<p class="highlight">
+Someone who stays calm even when surrounded by chaos.
+</p>
+
+</section>
+
+<section class="card">
+<h2>My Goals</h2>
+
+<ul>
+<li>Become excellent in science</li>
+<li>Keep learning every day</li>
+<li>Help others understand difficult ideas</li>
+<li>Build useful websites and projects</li>
+<li>Stay calm and balanced in difficult situations</li>
+</ul>
+
+</section>
+
+<section class="card">
+<h2>Contact</h2>
+
+<p>For business related or advertising contact via email:</p>
+
+<p>
+<a href="mailto:learn.educationandstudy@gmail.com">
+learn.educationandstudy@gmail.com
+</a>
+</p>
+
+<p>Also visit my YouTube channel:</p>
+
+<p>
+<a href="https://youtube.com/@whatifcuriousmind?si=dZk2kbJGnExxuygb" target="_blank">
+What If Curious Mind
+</a>
+</p>
+
+</section>
+
+</div>
+
+<footer>
+<p>© 2026 Sahil | Personal Philosophy Page</p>
+</footer>
+
+</body>
+</html>
