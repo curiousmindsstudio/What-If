@@ -8,104 +8,145 @@
 
 <title>What If Humans Never Needed Sleep? | Curious Minds</title>
 
-<meta name="description" content="What would happen if humans never needed sleep? Explore the biology of sleep, brain function, productivity, and how society might change without sleep.">
-
-<link rel="stylesheet" href="../style.css">
+<meta name="description" content="What would happen if humans never needed sleep? Explore the biology of sleep, brain function, productivity, and society without sleep.">
 
 <style>
 
 body{
 margin:0;
-font-family:Arial, Helvetica, sans-serif;
-background:#f4f7f6;
-color:#222;
+font-family:Segoe UI, sans-serif;
+background:linear-gradient(120deg,#141e30,#243b55);
+color:white;
 line-height:1.7;
 }
 
-header{
-background:#1b263b;
-color:white;
-padding:20px;
-text-align:center;
+/* progress bar */
+#progressBar{
+position:fixed;
+top:0;
+left:0;
+height:5px;
+width:0%;
+background:#4cffd2;
+z-index:9999;
 }
 
-nav a{
-color:white;
-margin:0 12px;
+/* navbar */
+.navbar{
+position:sticky;
+top:0;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:10px 25px;
+background:#0f1b2d;
+z-index:1000;
+}
+
+.nav-links{
+display:flex;
+gap:12px;
+}
+
+.nav-links a{
+padding:8px 14px;
+background:#4cffd2;
+color:black;
 text-decoration:none;
+border-radius:6px;
 font-weight:bold;
 }
 
-nav a:hover{
-text-decoration:underline;
+.nav-links a:hover{
+background:#36c9a7;
 }
 
-.hero{
-background:linear-gradient(120deg,#1b263b,#415a77);
-color:white;
-padding:60px 20px;
+header{
 text-align:center;
+padding:80px 20px;
 }
 
-.hero h1{
+header h1{
+font-size:46px;
 margin-bottom:10px;
 }
 
+header p{
+opacity:0.8;
+font-size:18px;
+}
+
 .container{
-max-width:900px;
+max-width:1100px;
 margin:auto;
-padding:30px 20px;
-background:white;
+padding:40px 20px;
+}
+
+section{
+margin-bottom:60px;
 }
 
 h2{
-margin-top:40px;
-color:#1b263b;
+border-left:6px solid #4cffd2;
+padding-left:12px;
+margin-bottom:20px;
 }
 
-.quick-box{
-background:#eef2ff;
-border-left:5px solid #415a77;
-padding:15px;
-margin:25px 0;
+.card-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
 }
 
-.didyouknow{
-background:#f0f5ff;
-border-left:5px solid #304ffe;
-padding:15px;
-margin:30px 0;
-}
-
-ul{
-padding-left:20px;
-}
-
-.related{
-background:#fafafa;
+.card{
+background:rgba(255,255,255,0.05);
 padding:20px;
-margin-top:40px;
+border-radius:12px;
+}
+
+.card:hover{
+background:rgba(255,255,255,0.1);
+}
+
+.highlight{
+background:#4cffd220;
+border-left:4px solid #4cffd2;
+padding:20px;
 border-radius:10px;
 }
 
-.related a{
-display:block;
-margin:6px 0;
-color:#1b263b;
-text-decoration:none;
+.fact{
+background:#ffffff15;
+padding:20px;
+border-radius:10px;
+margin-top:20px;
 }
 
-.related a:hover{
-text-decoration:underline;
+.fun-box{
+background:#ffd70025;
+border-left:4px solid #ffd700;
+padding:20px;
+border-radius:10px;
+}
+
+button{
+background:#4cffd2;
+border:none;
+padding:12px 18px;
+border-radius:8px;
+font-weight:bold;
+cursor:pointer;
+margin-top:15px;
+}
+
+button:hover{
+background:#36c9a7;
 }
 
 footer{
-background:#1b263b;
-color:white;
 text-align:center;
-padding:25px;
-margin-top:50px;
-font-size:14px;
+padding:40px 20px;
+opacity:0.8;
 }
 
 </style>
@@ -114,254 +155,172 @@ font-size:14px;
 
 <body>
 
-<header>
+<div id="progressBar"></div>
 
-<h1>Curious Minds</h1>
+<button id="themeToggle" onclick="toggleTheme()"
+style="position:fixed;top:10px;right:10px;border:none;border-radius:50%;padding:8px 10px;background:#4cffd2;font-size:16px;cursor:pointer;">
+🌙
+</button>
 
-<nav>
-<a href="../index.html">Home</a>
-<a href="../biology.html">Biology</a>
+<!-- Navigation -->
+
+<nav class="navbar">
+
+<img src="../Images/what-if.png" alt="What If Curious Minds Logo" style="width:45px;">
+
+<div class="nav-links">
+<a href="../index.html">🏠 Home</a>
+<a href="../space.html">🌌 Space</a>
+<a href="../physics.html">⚛️ Physics</a>
+<a href="../chemistry.html">🧪 Chemistry</a>
+<a href="../biology.html">🧬 Biology</a>
+<a href="../contact.html">📧 Contact</a>
+</div>
+
 </nav>
 
+<header>
+<h1>💤 What If Humans Never Needed Sleep?</h1>
+<p>Exploring how the brain works and life without sleep.</p>
 </header>
 
-
-<section class="hero">
-
-<h1>What If Humans Never Needed Sleep?</h1>
-
-<p>Exploring how the brain works and what life might look like in a sleepless world.</p>
-
-</section>
-
-
-<main class="container">
+<div class="container">
 
 <section>
-
 <h2>Introduction</h2>
-
-<p>
-Humans spend roughly one third of their lives sleeping. For most people this means around
-eight hours every day dedicated entirely to rest. But what if our brains evolved in a way
-that made sleep unnecessary?
-</p>
-
-<p>
-Imagine a world where humans could remain fully alert and mentally healthy twenty-four
-hours a day. The way we work, learn, and organize society could change dramatically.
-</p>
-
+<p>Humans spend roughly one third of their lives sleeping. What if sleep were unnecessary and we could remain fully alert 24/7?</p>
+<p>The way we work, learn, and organize society would change dramatically.</p>
 </section>
 
-
-<div class="quick-box">
-
-<strong>Quick Facts About Sleep</strong>
-
-<ul>
-
-<li>The average adult sleeps about 7–9 hours per night.</li>
-
-<li>Sleep is essential for memory formation and learning.</li>
-
-<li>Lack of sleep can impair attention, mood, and decision-making.</li>
-
-</ul>
-
+<section>
+<h2>Quick Facts About Sleep</h2>
+<div class="card-grid">
+<div class="card">
+🛌 The average adult sleeps about 7–9 hours per night.
 </div>
-
+<div class="card">
+🧠 Sleep is essential for memory formation and learning.
+</div>
+<div class="card">
+⚠️ Lack of sleep impairs attention, mood, and decision-making.
+</div>
+</div>
+</section>
 
 <section>
-
 <h2>What We Know</h2>
-
-<p>
-Sleep plays a crucial role in maintaining brain health. During sleep, the brain performs
-several important functions that support mental performance and overall well-being.
-</p>
-
-<p>These functions include:</p>
-
-<ul>
-
-<li><strong>Memory consolidation</strong> — strengthening memories formed during the day.</li>
-
-<li><strong>Waste removal</strong> — clearing harmful metabolic byproducts from brain tissue.</li>
-
-<li><strong>Neural restoration</strong> — repairing and reorganizing connections between neurons.</li>
-
-</ul>
-
-<p>
-Scientists have discovered a brain-cleaning mechanism known as the
-<strong>glymphatic system</strong>. This system becomes significantly more active during sleep,
-flushing toxins and metabolic waste out of the brain.
-</p>
-
-</section>
-
-
-<section>
-
-<h2>What We Don’t Know</h2>
-
-<p>
-Despite decades of research, scientists still do not fully understand why sleep is so
-essential for survival. It remains unclear whether the human brain could evolve
-alternative systems capable of replacing sleep entirely.
-</p>
-
-<p>
-Studies show that chronic sleep deprivation can lead to serious problems including
-memory loss, weakened immune function, and cognitive impairment.
-</p>
-
-</section>
-
-
-<section>
-
-<h2>Biological Possibilities</h2>
-
-<p>
-If humans never needed sleep, the brain would likely require completely different
-biological systems to maintain its health.
-</p>
-
-<p>Possible adaptations might include:</p>
-
-<ul>
-
-<li>More efficient neural repair processes</li>
-
-<li>Continuous brain waste-removal mechanisms</li>
-
-<li>Faster information processing and memory storage</li>
-
-<li>New forms of cellular recovery that occur while awake</li>
-
-</ul>
-
-</section>
-
-
-<section>
-
-<h2>Societal Impact</h2>
-
-<p>
-Removing sleep from human life would instantly give people roughly eight additional
-hours every day. This change could dramatically reshape society.
-</p>
-
-<ul>
-
-<li>Productivity could increase in many industries.</li>
-
-<li>Education systems might expand learning hours.</li>
-
-<li>Global economies could operate continuously without downtime.</li>
-
-<li>Work schedules might become completely flexible.</li>
-
-</ul>
-
-<p>
-Entire cities might operate around the clock, with no real distinction between day and night.
-</p>
-
-</section>
-
-
-<div class="didyouknow">
-
-<strong>Did You Know?</strong>
-
-<p>
-Some marine mammals like dolphins sleep with only half of their brain at a time.
-This allows them to remain partially awake while still resting essential brain
-functions.
-</p>
-
+<div class="card-grid">
+<div class="card">
+<strong>Memory Consolidation:</strong> Strengthens memories formed during the day.
 </div>
-
+<div class="card">
+<strong>Waste Removal:</strong> Glymphatic system flushes toxins from the brain.
+</div>
+<div class="card">
+<strong>Neural Restoration:</strong> Repairs and reorganizes neuronal connections.
+</div>
+</div>
+</section>
 
 <section>
+<h2>What We Don’t Know</h2>
+<div class="highlight">
+<p>Scientists still do not fully understand why sleep is so essential. Could humans evolve systems to replace sleep entirely?</p>
+</div>
+</section>
 
+<section>
+<h2>Biological Possibilities</h2>
+<div class="card-grid">
+<div class="card">
+More efficient neural repair while awake.
+</div>
+<div class="card">
+Continuous waste-removal systems.
+</div>
+<div class="card">
+Faster information processing and memory storage.
+</div>
+<div class="card">
+New cellular recovery mechanisms while awake.
+</div>
+</div>
+</section>
+
+<section>
+<h2>Societal Impact</h2>
+<ul>
+<li>Extra 8 hours daily boosts productivity.</li>
+<li>Schools and universities could run longer.</li>
+<li>Global economy could operate 24/7.</li>
+<li>Flexible work schedules become standard.</li>
+</ul>
+<p>Cities could operate non-stop, erasing the concept of night and day.</p>
+</section>
+
+<section>
+<h2>Did You Know?</h2>
+<div class="fact">
+Some dolphins sleep with only half their brain at a time, remaining partially awake while still resting essential functions.
+</div>
+</section>
+
+<section>
 <h2>Fun Scenario</h2>
-
-<p>
-If humans never needed sleep, nighttime could become just another productive part
-of daily life. Restaurants, schools, research labs, and businesses might remain
-open 24 hours a day.
-</p>
-
-<p>
-Cities might glow with activity all night long, and the concept of
-“staying up late” would completely disappear.
-</p>
-
+<div class="fun-box">
+<p>Imagine restaurants, labs, and schools open 24/7. Nighttime becomes just another productive part of the day.</p>
+</div>
 </section>
-
 
 <section>
-
-<h2>Final Thought</h2>
-
-<p>
-Sleep may feel like an inconvenience sometimes, but it performs critical biological
-functions that keep our brains healthy. Without sleep, the human body would require
-entirely new biological systems to maintain balance and mental stability.
-</p>
-
-<p>
-For now, sleep remains one of the most mysterious and essential processes in human biology.
-</p>
-
+<h2>Try This Thought Experiment</h2>
+<p>Click the button below and imagine never needing sleep.</p>
+<button onclick="showMessage()">Activate Sleepless Life</button>
+<p id="message"></p>
 </section>
-
 
 <div class="related">
-
 <h2>Related What If Questions</h2>
-
 <a href="what-if-humans-stopped-aging.html">What If Humans Stopped Aging?</a>
-
 <a href="what-if-humans-could-regenerate-limbs.html">What If Humans Could Regenerate Limbs?</a>
-
-<a href="what-if-humans-could-photosynthesize.html">What If Humans Could Photosynthesize?</a>
+<a href="what-if-humans-had-perfect-memory.html">What If Humans Had Perfect Memory?</a>
+</div>
 
 </div>
 
-
-</main>
-
-
 <footer>
-
-<p><strong>Curious Minds</strong></p>
-
-<p>Exploring science, biology, and impossible questions.</p>
-
-<p>
-Business enquiries:
-<a href="mailto:learn.educationandstudy@gmail.com" style="color:white;">
-learn.educationandstudy@gmail.com
-</a>
-</p>
-
-<p>
-YouTube:
-<a href="https://www.youtube.com/@WhatIfCuriousMind" style="color:white;">
-What If Curious Mind
-</a>
-</p>
-
-<p>© 2026 Curious Minds</p>
-
+<p><b>What If Curious Minds</b></p>
+<p>📧 <a href="mailto:learn.educationandstudy@gmail.com" style="color:#4cffd2;">learn.educationandstudy@gmail.com</a></p>
+<p><a href="https://www.youtube.com/@whatifcuriousmind" target="_blank">▶️ YouTube</a></p>
+<p style="font-size:14px;">© 2026 What If Curious Minds</p>
 </footer>
 
+<script>
+window.onscroll = function(){
+let winScroll=document.body.scrollTop||document.documentElement.scrollTop;
+let height=document.documentElement.scrollHeight-document.documentElement.clientHeight;
+let scrolled=(winScroll/height)*100;
+document.getElementById("progressBar").style.width=scrolled+"%";
+}
+
+function toggleTheme(){
+let body=document.body;
+let button=document.getElementById("themeToggle");
+if(body.style.background==="white"){
+body.style.background="linear-gradient(120deg,#141e30,#243b55)";
+body.style.color="white";
+button.innerHTML="🌙";
+}else{
+body.style.background="white";
+body.style.color="black";
+button.innerHTML="☀️";
+}
+}
+
+function showMessage(){
+document.getElementById("message").innerHTML="💤 Imagine living 24/7 fully awake. Amazing... but exhausting!";
+}
+</script>
 
 </body>
   </html>
