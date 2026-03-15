@@ -12,15 +12,54 @@
 
 <style>
 
-body
-  <div id="progressBar" style="position:fixed; top:0; left:0; height:5px; width:0%; background:#4cffd2; z-index:9999;"></div>
-  
-  {
+body{
 margin:0;
 font-family:Segoe UI, sans-serif;
 background:linear-gradient(120deg,#141e30,#243b55);
 color:white;
 line-height:1.7;
+}
+
+/* progress bar */
+#progressBar{
+position:fixed;
+top:0;
+left:0;
+height:5px;
+width:0%;
+background:#4cffd2;
+z-index:9999;
+}
+
+/* navigation */
+
+.navbar{
+position:sticky;
+top:0;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:10px 25px;
+background:#0f1b2d;
+z-index:1000;
+}
+
+.nav-links{
+display:flex;
+gap:12px;
+}
+
+.nav-links a{
+padding:8px 14px;
+background:#4cffd2;
+color:black;
+text-decoration:none;
+border-radius:6px;
+font-weight:bold;
+}
+
+.nav-links a:hover{
+background:#36c9a7;
 }
 
 header{
@@ -29,7 +68,7 @@ padding:80px 20px;
 }
 
 header h1{
-font-size:48px;
+font-size:46px;
 margin-bottom:10px;
 }
 
@@ -127,8 +166,8 @@ background:#36c9a7;
 
 footer{
 text-align:center;
-padding:30px;
-opacity:0.6;
+padding:40px 20px;
+opacity:0.8;
 }
 
 </style>
@@ -137,48 +176,48 @@ opacity:0.6;
 
 <body>
 
-<header>
-<button id="themeToggle" onclick="toggleTheme()" 
-style="position:fixed; top:10px; right:10px; padding:8px 12px; border:none; border-radius:6px; background:#4cffd2; font-size:16px; cursor:pointer;">
+<div id="progressBar"></div>
+
+<button id="themeToggle" onclick="toggleTheme()"
+style="position:fixed;top:10px;right:10px;border:none;border-radius:50%;padding:8px 10px;background:#4cffd2;font-size:16px;cursor:pointer;">
 🌙
 </button>
-  <nav class="navbar">
 
-<nav style="position:sticky; top:0; display:flex; justify-content:space-between; align-items:center; padding:10px 25px; background:#0f1b2d; z-index:1000;">
+<!-- Navigation -->
 
-<div>
-<img src="Images/what-if.png" alt="What If Curious Minds Logo"
-style="width:45px;">
+<nav class="navbar">
+
+<img src="Images/what-if.png" alt="What If Curious Minds Logo" style="width:45px;">
+
+<div class="nav-links">
+
+<a href="index.html">🏠 Home</a>
+<a href="space.html">🌌 Space</a>
+<a href="physics.html">⚛️ Physics</a>
+<a href="chemistry.html">🧪 Chemistry</a>
+<a href="biology.html">🧬 Biology</a>
+<a href="contact.html">📧 Contact</a>
+
 </div>
 
-<div style="display:flex; gap:12px;">
-
-  <nav class="button-group" aria-label="Explore topics">
-
-<a href="index.html" class="topic-btn">🏠 Home</a>
-<a href="space.html" class="topic-btn">🌌 Space</a>
-<a href="physics.html" class="topic-btn">⚛️ Physics</a>
-<a href="chemistry.html" class="topic-btn">🧪 Chemistry</a>
-<a href="biology.html" class="topic-btn">🧬 Biology</a>
-<a href="contact.html" class="topic-btn">📧 Contact</a>
-
 </nav>
+
+<header>
+
 <h1>🦠 What If All Bacteria Disappeared?</h1>
 
 <p>A tiny form of life that secretly keeps the planet running.</p>
 
 </header>
 
-
 <div class="container">
-
 
 <section>
 
 <h2>Introduction</h2>
 
 <p>
-Bacteria are among the most abundant life forms on Earth.  
+Bacteria are among the most abundant life forms on Earth.
 They exist inside our bodies, in the soil beneath our feet,
 and even floating in the atmosphere.
 </p>
@@ -194,8 +233,6 @@ So what would happen if every single bacterium suddenly vanished?
 
 </section>
 
-
-
 <section>
 
 <h2>What We Know</h2>
@@ -203,70 +240,23 @@ So what would happen if every single bacterium suddenly vanished?
 <div class="grid">
 
 <div class="card">
-
 <h3>🍽 Digestion</h3>
-
-<p>
-Trillions of bacteria live in the human gut.
-They help break down complex foods and produce important vitamins.
-</p>
-
+<p>Trillions of bacteria live in the human gut and help digest food.</p>
 </div>
 
 <div class="card">
-
 <h3>🌱 Nutrient Cycles</h3>
-
-<p>
-Bacteria recycle nutrients such as nitrogen and carbon,
-keeping ecosystems balanced and fertile.
-</p>
-
+<p>Bacteria recycle nitrogen and carbon in ecosystems.</p>
 </div>
 
 <div class="card">
-
 <h3>🍂 Decomposition</h3>
-
-<p>
-Without bacteria, dead plants and animals would decompose
-extremely slowly.
-</p>
-
+<p>Without bacteria, dead organisms would decompose extremely slowly.</p>
 </div>
 
 </div>
 
 </section>
-
-
-
-<section>
-
-<h2>What Scientists Don't Fully Know</h2>
-
-<div class="highlight">
-
-<p>
-
-Because bacteria are involved in almost every ecosystem on Earth,
-predicting the complete consequences of their disappearance
-is incredibly difficult.
-
-</p>
-
-<p>
-
-Many biological systems depend on bacterial interactions that
-scientists are still discovering today.
-
-</p>
-
-</div>
-
-</section>
-
-
 
 <section>
 
@@ -275,24 +265,13 @@ scientists are still discovering today.
 <div class="warning">
 
 <p>
-If bacteria vanished instantly, the human digestive system
-would struggle to function properly.
-</p>
-
-<p>
-Our gut microbiome helps break down food and produce
-essential nutrients like vitamin K.
-</p>
-
-<p>
-Without it, digestion would become much less efficient.
+The human digestive system would struggle without gut bacteria.
+Important vitamins like vitamin K would become scarce.
 </p>
 
 </div>
 
 </section>
-
-
 
 <section>
 
@@ -301,188 +280,68 @@ Without it, digestion would become much less efficient.
 <div class="timeline">
 
 <div class="timebox">
-
 <h3>⏱ First Days</h3>
-
-<p>
-Human digestion begins to weaken as beneficial gut bacteria disappear.
-Many animals experience similar problems.
-</p>
-
+<p>Digestive systems weaken across many animals.</p>
 </div>
 
 <div class="timebox">
-
 <h3>📅 Weeks Later</h3>
-
-<p>
-Decomposition slows dramatically.
-Dead organic material begins accumulating in ecosystems.
-</p>
-
+<p>Dead material accumulates due to slow decomposition.</p>
 </div>
 
 <div class="timebox">
-
 <h3>🌍 Months to Years</h3>
-
-<p>
-Nitrogen cycles collapse, affecting plant growth and food chains.
-Entire ecosystems could destabilize.
-</p>
-
+<p>Nitrogen cycles collapse, affecting global agriculture.</p>
 </div>
 
 </div>
 
 </section>
-
-
-
-<section>
-
-<h2>Ecosystem Effects</h2>
-
-<p>
-
-Bacteria play a major role in maintaining the balance of nature.
-
-</p>
-
-<div class="grid">
-
-<div class="card">
-
-<h3>🌳 Soil Health</h3>
-
-<p>
-Soil bacteria help plants absorb nutrients.
-Without them, crop productivity would decline dramatically.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>🌊 Oceans</h3>
-
-<p>
-Marine bacteria recycle nutrients and support
-ocean food chains.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>🐾 Food Webs</h3>
-
-<p>
-Disrupting bacterial ecosystems would affect animals,
-plants, and microorganisms worldwide.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-
 
 <section>
 
 <h2>Food That Would Disappear</h2>
 
-<p>
-Many foods depend on bacterial fermentation.
-</p>
-
 <div class="grid">
 
 <div class="card">
-
 <h3>🧀 Cheese</h3>
 <p>Cheese production depends on bacterial cultures.</p>
-
 </div>
 
 <div class="card">
-
 <h3>🥛 Yogurt</h3>
 <p>Yogurt forms when bacteria ferment milk.</p>
-
 </div>
 
 <div class="card">
-
 <h3>🥒 Fermented Foods</h3>
-<p>Foods like pickles, kimchi, and sauerkraut rely on bacteria.</p>
-
+<p>Pickles, kimchi, and sauerkraut rely on bacteria.</p>
 </div>
 
 </div>
 
 </section>
-
-
 
 <section>
 
 <h2>Did You Know?</h2>
 
 <div class="fact">
-
-🧬 The human body contains roughly  
-<b>as many bacterial cells as human cells</b>.
-
+🧬 The human body contains roughly as many bacterial cells as human cells.
 </div>
 
 <div class="fact">
-
-🌍 A single gram of soil can contain  
-<b>billions of bacteria</b>.
-
+🌍 One gram of soil can contain billions of bacteria.
 </div>
 
 </section>
-
-
-
-<section>
-
-<h2>Fun Thought</h2>
-
-<div class="fun">
-
-<p>
-
-If bacteria disappeared, supermarkets would look very different.
-
-</p>
-
-<p>
-
-Entire sections of yogurt, cheese, and fermented foods
-would simply vanish overnight!
-
-</p>
-
-</div>
-
-</section>
-
-
 
 <section>
 
 <h2>Thought Experiment</h2>
 
-<p>
-
-Press the button below to imagine a world without bacteria.
-
-</p>
+<p>Press the button below to imagine a world without bacteria.</p>
 
 <button onclick="showScenario()">Simulate Scenario</button>
 
@@ -490,97 +349,82 @@ Press the button below to imagine a world without bacteria.
 
 </section>
 
-
-
 </div>
 
-
-
-<footer style="text-align:center; padding:40px 20px; opacity:0.8;">
+<footer>
 
 <p><b>What If Curious Minds</b></p>
 
 <p>
-
 📧 
-<a href="mailto:learn.educationandstudy@gmail.com" style="color:#4cffd2; text-decoration:none;">
+<a href="mailto:learn.educationandstudy@gmail.com" style="color:#4cffd2;text-decoration:none;">
 learn.educationandstudy@gmail.com
 </a>
-
 </p>
 
 <p>
 
-<a href="https://www.reddit.com/r/WhatIf_CuriousMinds/" target="_blank" rel="noopener noreferrer">
-<img src="reddit.jpeg" alt="Reddit" style="width:20px; vertical-align:middle; margin-right:5px;">
+<a href="https://www.reddit.com/r/WhatIf_CuriousMinds/" target="_blank">
+<img src="reddit.jpeg" style="width:20px;vertical-align:middle;margin-right:5px;">
 Reddit
 </a>
 
 |
 
-<a href="https://youtube.com/@whatifcuriousmind?si=kDN_nEw2bi3NLJ7Y" target="_blank" rel="noopener noreferrer">
+<a href="https://youtube.com/@whatifcuriousmind?si=kDN_nEw2bi3NLJ7Y" target="_blank">
 ▶️ YouTube
 </a>
 
 </p>
 
-<p style="margin-top:15px; font-size:14px;">
-© 2026 What If Curious Minds
-</p>
+<p style="font-size:14px;">© 2026 What If Curious Minds</p>
 
 </footer>
-
-
 
 <script>
 
 function showScenario(){
-
 document.getElementById("result").innerHTML =
-"🌍 Without bacteria, Earth's ecosystems would slowly collapse. Tiny organisms truly keep the planet alive.";
+"🌍 Without bacteria, Earth's ecosystems would slowly collapse. Tiny organisms keep the planet alive.";
+}
+
+/* progress bar */
+
+window.onscroll=function(){
+
+let winScroll=document.body.scrollTop||document.documentElement.scrollTop;
+let height=document.documentElement.scrollHeight-document.documentElement.clientHeight;
+let scrolled=(winScroll/height)*100;
+
+document.getElementById("progressBar").style.width=scrolled+"%";
 
 }
 
-</script>
-<script>
-
-/* Reading Progress Bar */
-
-window.onscroll = function() {
-
-let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-let scrolled = (winScroll / height) * 100;
-
-document.getElementById("progressBar").style.width = scrolled + "%";
-
-};
-
-
-/* Dark / Light Theme Toggle */
+/* theme toggle */
 
 function toggleTheme(){
 
-let body = document.body;
-let button = document.getElementById("themeToggle");
+let body=document.body;
+let button=document.getElementById("themeToggle");
 
-if(body.style.background === "white"){
+if(body.style.background==="white"){
 
-body.style.background = "linear-gradient(120deg,#141e30,#243b55)";
-body.style.color = "white";
-button.innerHTML = "🌙";
+body.style.background="linear-gradient(120deg,#141e30,#243b55)";
+body.style.color="white";
+button.innerHTML="🌙";
 
 }else{
 
-body.style.background = "white";
-body.style.color = "black";
-button.innerHTML = "☀️";
+body.style.background="white";
+body.style.color="black";
+button.innerHTML="☀️";
 
 }
 
 }
 
 </script>
+
 </body>
 
   </html>
