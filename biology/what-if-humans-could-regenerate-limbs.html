@@ -6,106 +6,137 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>What If Humans Could Regenerate Limbs? | Curious Minds</title>
+<title>What If Humans Could Regenerate Limbs?</title>
 
-<meta name="description" content="Explore what would happen if humans could regenerate limbs like salamanders. Learn the science, medical possibilities, and future of regeneration biology.">
-
-<link rel="stylesheet" href="../style.css">
+<meta name="description" content="Explore what would happen if humans could regenerate limbs like salamanders.">
 
 <style>
 
 body{
 margin:0;
-font-family:Arial, Helvetica, sans-serif;
-background:#f4f7f6;
-color:#222;
+font-family:Segoe UI, sans-serif;
+background:linear-gradient(120deg,#141e30,#243b55);
+color:white;
 line-height:1.7;
 }
 
-header{
-background:#0b3d2e;
-color:white;
-padding:20px;
-text-align:center;
+/* progress bar */
+
+#progressBar{
+position:fixed;
+top:0;
+left:0;
+height:5px;
+width:0%;
+background:#4cffd2;
+z-index:9999;
 }
 
-nav a{
-color:white;
-margin:0 12px;
+/* navigation */
+
+.navbar{
+position:sticky;
+top:0;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:10px 25px;
+background:#0f1b2d;
+z-index:1000;
+}
+
+.nav-links{
+display:flex;
+gap:12px;
+}
+
+.nav-links a{
+padding:8px 14px;
+background:#4cffd2;
+color:black;
 text-decoration:none;
+border-radius:6px;
 font-weight:bold;
 }
 
-nav a:hover{
-text-decoration:underline;
+.nav-links a:hover{
+background:#36c9a7;
 }
 
-.hero{
-background:linear-gradient(120deg,#1b4332,#2d6a4f);
-color:white;
-padding:60px 20px;
+header{
 text-align:center;
+padding:80px 20px;
 }
 
-.hero h1{
+header h1{
+font-size:46px;
 margin-bottom:10px;
 }
 
+header p{
+opacity:0.8;
+font-size:18px;
+}
+
 .container{
-max-width:900px;
+max-width:1100px;
 margin:auto;
-padding:30px 20px;
-background:white;
+padding:40px 20px;
+}
+
+section{
+margin-bottom:60px;
 }
 
 h2{
-margin-top:40px;
-color:#145c45;
+border-left:6px solid #4cffd2;
+padding-left:12px;
+margin-bottom:20px;
 }
 
-.quick-box{
-background:#eef7f3;
-border-left:5px solid #0b3d2e;
-padding:15px;
-margin:25px 0;
+.highlight{
+background:#4cffd220;
+padding:20px;
+border-left:4px solid #4cffd2;
+border-radius:10px;
 }
 
-.didyouknow{
-background:#f0f5ff;
-border-left:5px solid #304ffe;
-padding:15px;
-margin:30px 0;
+.fact{
+background:#ffffff15;
+padding:20px;
+border-radius:10px;
+margin-top:20px;
 }
 
-ul{
-padding-left:20px;
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:rgba(255,255,255,0.05);
+padding:20px;
+border-radius:12px;
 }
 
 .related{
-background:#fafafa;
+background:#ffffff10;
 padding:20px;
-margin-top:40px;
-border-radius:10px;
+border-radius:12px;
 }
 
 .related a{
 display:block;
-margin:6px 0;
-color:#145c45;
+margin:8px 0;
+color:#4cffd2;
 text-decoration:none;
 }
 
-.related a:hover{
-text-decoration:underline;
-}
-
 footer{
-background:#0b3d2e;
-color:white;
 text-align:center;
-padding:25px;
-margin-top:50px;
-font-size:14px;
+padding:40px 20px;
+opacity:0.8;
 }
 
 </style>
@@ -114,36 +145,49 @@ font-size:14px;
 
 <body>
 
+<div id="progressBar"></div>
+
+<button id="themeToggle" onclick="toggleTheme()"
+style="position:fixed;top:10px;right:10px;border:none;border-radius:50%;padding:8px 10px;background:#4cffd2;font-size:16px;cursor:pointer;">
+🌙
+</button>
+
+<!-- Navigation -->
+
+<nav class="navbar">
+
+<img src="../Images/what-if.png" alt="What If Curious Minds Logo" style="width:45px;">
+
+<div class="nav-links">
+
+<a href="../index.html">🏠 Home</a>
+<a href="../space.html">🌌 Space</a>
+<a href="../physics.html">⚛️ Physics</a>
+<a href="../chemistry.html">🧪 Chemistry</a>
+<a href="../biology.html">🧬 Biology</a>
+<a href="../contact.html">📧 Contact</a>
+
+</div>
+
+</nav>
+
 <header>
 
-<h1>Curious Minds</h1>
+<h1>🦎 What If Humans Could Regenerate Limbs?</h1>
 
-<nav>
-<a href="../index.html">Home</a>
-<a href="../biology.html">Biology</a>
-</nav>
+<p>Exploring the science of regeneration and the future of medicine.</p>
 
 </header>
 
-
-<section class="hero">
-
-<h1>What If Humans Could Regenerate Limbs?</h1>
-
-<p>Exploring the science of regeneration and how it could change the future of medicine.</p>
-
-</section>
-
-
-<main class="container">
+<div class="container">
 
 <section>
 
 <h2>Introduction</h2>
 
 <p>
-Imagine losing a finger, a hand, or even an entire arm and watching it slowly grow back over the next few months.
-For humans this sounds impossible, but for many animals it is completely normal.
+Imagine losing a finger, a hand, or even an entire arm and watching it slowly grow back.
+For humans this sounds impossible, but for many animals it is normal.
 </p>
 
 <p>
@@ -153,214 +197,221 @@ If humans possessed the same ability, medicine and biology would change dramatic
 
 </section>
 
+<section>
 
-<div class="quick-box">
+<h2>Quick Facts</h2>
 
-<strong>Quick Facts</strong>
+<div class="fact">
 
 <ul>
-
 <li>Salamanders can regrow entire legs.</li>
-
 <li>Starfish can regenerate arms and sometimes whole bodies.</li>
-
-<li>Axolotls can regenerate limbs, spinal cords, and even parts of their hearts.</li>
-
+<li>Axolotls can regenerate limbs, spinal cords, and heart tissue.</li>
 </ul>
 
 </div>
 
+</section>
 
 <section>
 
 <h2>What We Know</h2>
 
 <p>
-Certain animals such as salamanders, starfish, and axolotls possess extraordinary regenerative abilities.
-When they lose a limb, cells near the injury transform into a flexible state similar to stem cells.
+Animals like salamanders and axolotls possess extraordinary regenerative abilities.
+When they lose a limb, nearby cells transform into flexible stem-like cells.
 </p>
 
 <p>
-These cells gather into a structure called a <strong>blastema</strong>, which acts like a biological construction site.
-From this structure, new tissues begin forming until the entire limb is restored.
+These cells form a structure called a <b>blastema</b>, which acts like a biological construction site
+where new tissues gradually rebuild the limb.
 </p>
 
 </section>
-
 
 <section>
 
 <h2>What We Don’t Know</h2>
 
-<p>
-Scientists still do not fully understand why humans cannot regenerate limbs in the same way.
-Instead of rebuilding complex tissues, our bodies typically heal wounds by forming scar tissue.
-</p>
+<div class="highlight">
 
 <p>
-Researchers are investigating whether humans still carry dormant genetic pathways for regeneration,
-or whether those abilities were lost during evolution.
+Scientists still do not fully understand why humans cannot regenerate limbs.
+Instead of rebuilding tissues, our bodies usually repair injuries with scar tissue.
 </p>
+
+</div>
 
 </section>
-
 
 <section>
 
 <h2>Possible Biological Mechanisms</h2>
 
-<p>
-Several biological systems may play a role in regeneration:
-</p>
+<div class="grid">
 
-<ul>
+<div class="card">
+<h3>🧬 Stem Cells</h3>
+<p>Cells capable of becoming different tissue types.</p>
+</div>
 
-<li><strong>Stem Cells</strong> — cells capable of becoming different tissue types.</li>
+<div class="card">
+<h3>🧪 Gene Activation</h3>
+<p>Genes that control tissue growth and regeneration.</p>
+</div>
 
-<li><strong>Gene Activation</strong> — specific genes controlling tissue growth.</li>
+<div class="card">
+<h3>⚡ Growth Factors</h3>
+<p>Signals that tell cells to divide and repair damage.</p>
+</div>
 
-<li><strong>Growth Factors</strong> — molecules that signal cells to divide and repair damage.</li>
-
-</ul>
-
-<p>
-Future medical technology might activate these processes artificially,
-allowing controlled regeneration in human tissues.
-</p>
+</div>
 
 </section>
-
 
 <section>
 
 <h2>Impact on Medicine</h2>
 
 <ul>
-
 <li>Amputations could become temporary conditions.</li>
-
-<li>Organ damage might be repaired naturally.</li>
-
+<li>Organ damage might repair naturally.</li>
 <li>Trauma recovery could improve dramatically.</li>
-
 <li>Spinal cord injuries might become treatable.</li>
-
 </ul>
 
-<p>
-Hospitals would focus less on replacement and more on regeneration.
-</p>
-
 </section>
-
 
 <section>
 
-<h2>Social and Economic Effects</h2>
-
-<p>
-If humans could regenerate limbs, many aspects of society might change.
-</p>
+<h2>Social Effects</h2>
 
 <ul>
-
-<li>Prosthetic technology might become less necessary.</li>
-
+<li>Prosthetic limbs might become less common.</li>
 <li>Military medicine would transform.</li>
-
-<li>Long-term disability rates could decline.</li>
-
+<li>Long-term disability rates could decrease.</li>
 </ul>
 
 </section>
 
+<section>
 
-<div class="didyouknow">
+<h2>Did You Know?</h2>
 
-<strong>Did You Know?</strong>
+<div class="fact">
 
-<p>
-The axolotl is one of the most powerful regenerators in the animal kingdom.
-It can regrow limbs, parts of its brain, and even sections of its heart without forming scars.
-</p>
+The axolotl is one of the most powerful regenerators in nature.
+It can regrow limbs, parts of its brain, and sections of its heart.
 
 </div>
 
+</section>
 
 <section>
 
 <h2>Future Research</h2>
 
 <p>
-Scientists are currently studying regenerative biology through stem-cell research,
+Scientists are exploring regenerative medicine through stem-cell research,
 genetic engineering, and tissue engineering.
 </p>
 
 <p>
-Although true human limb regeneration has not yet been achieved,
-new discoveries in regenerative medicine are being made every year.
+While full human limb regeneration is not yet possible,
+new discoveries are being made every year.
 </p>
 
 </section>
-
 
 <section>
 
 <h2>Final Thought</h2>
 
 <p>
-The ability to regrow limbs might sound like science fiction today,
-but nature already proves it is biologically possible.
-</p>
-
-<p>
-Understanding how regenerative animals repair themselves could one day allow
-humans to unlock similar abilities.
+Nature already proves that limb regeneration is biologically possible.
+If scientists understand how regenerative animals repair themselves,
+humans may one day unlock similar abilities.
 </p>
 
 </section>
-
 
 <div class="related">
 
 <h2>Related What If Questions</h2>
 
-<a href="what-if-humans-stopped-aging.html">What If Humans Stopped Aging?</a>
+<a href="#">What If Humans Stopped Aging?</a>
 
-<a href="what-if-humans-could-photosynthesize.html">What If Humans Could Photosynthesize?</a>
+<a href="#">What If Humans Could Photosynthesize?</a>
 
 <a href="#">What If Humans Never Needed Sleep?</a>
 
 </div>
 
-
-</main>
-
+</div>
 
 <footer>
 
-<p><strong>Curious Minds</strong></p>
-
-<p>Exploring science, biology, and impossible questions.</p>
+<p><b>What If Curious Minds</b></p>
 
 <p>
-Business enquiries:
-<a href="mailto:learn.educationandstudy@gmail.com" style="color:white;">
+
+📧
+<a href="mailto:learn.educationandstudy@gmail.com" style="color:#4cffd2;">
 learn.educationandstudy@gmail.com
 </a>
+
 </p>
 
 <p>
-YouTube:
-<a href="https://www.youtube.com/@WhatIfCuriousMind" style="color:white;">
-What If Curious Mind
+
+<a href="https://youtube.com/@whatifcuriousmind?si=kDN_nEw2bi3NLJ7Y" target="_blank">
+▶️ YouTube
 </a>
+
 </p>
 
-<p>© 2026 Curious Minds</p>
+<p style="font-size:14px;">© 2026 What If Curious Minds</p>
 
 </footer>
 
+<script>
+
+/* progress bar */
+
+window.onscroll=function(){
+
+let winScroll=document.body.scrollTop||document.documentElement.scrollTop;
+let height=document.documentElement.scrollHeight-document.documentElement.clientHeight;
+let scrolled=(winScroll/height)*100;
+
+document.getElementById("progressBar").style.width=scrolled+"%";
+
+}
+
+/* theme toggle */
+
+function toggleTheme(){
+
+let body=document.body;
+let button=document.getElementById("themeToggle");
+
+if(body.style.background==="white"){
+
+body.style.background="linear-gradient(120deg,#141e30,#243b55)";
+body.style.color="white";
+button.innerHTML="🌙";
+
+}else{
+
+body.style.background="white";
+body.style.color="black";
+button.innerHTML="☀️";
+
+}
+
+}
+
+</script>
 
 </body>
-  </html>
+                        </html>
