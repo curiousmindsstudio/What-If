@@ -12,7 +12,10 @@
 
 <style>
 
-body{
+body
+  <div id="progressBar" style="position:fixed; top:0; left:0; height:5px; width:0%; background:#4cffd2; z-index:9999;"></div>
+  
+  {
 margin:0;
 font-family:Segoe UI, sans-serif;
 background:linear-gradient(120deg,#141e30,#243b55);
@@ -135,7 +138,11 @@ opacity:0.6;
 <body>
 
 <header>
-<nav class="navbar">
+<button id="themeToggle" onclick="toggleTheme()" 
+style="position:fixed; top:10px; right:10px; padding:8px 12px; border:none; border-radius:6px; background:#4cffd2; font-size:16px; cursor:pointer;">
+🌙
+</button>
+  <nav class="navbar">
 
 <nav style="position:sticky; top:0; display:flex; justify-content:space-between; align-items:center; padding:10px 25px; background:#0f1b2d; z-index:1000;">
 
@@ -535,7 +542,45 @@ document.getElementById("result").innerHTML =
 }
 
 </script>
+<script>
 
+/* Reading Progress Bar */
+
+window.onscroll = function() {
+
+let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+let scrolled = (winScroll / height) * 100;
+
+document.getElementById("progressBar").style.width = scrolled + "%";
+
+};
+
+
+/* Dark / Light Theme Toggle */
+
+function toggleTheme(){
+
+let body = document.body;
+let button = document.getElementById("themeToggle");
+
+if(body.style.background === "white"){
+
+body.style.background = "linear-gradient(120deg,#141e30,#243b55)";
+body.style.color = "white";
+button.innerHTML = "🌙";
+
+}else{
+
+body.style.background = "white";
+body.style.color = "black";
+button.innerHTML = "☀️";
+
+}
+
+}
+
+</script>
 </body>
 
   </html>
