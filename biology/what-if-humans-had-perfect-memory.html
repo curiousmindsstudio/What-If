@@ -1,36 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>What If Humans Had Perfect Memory?</title>
 
-<meta name="description" content="Imagine remembering every moment of your life. Explore the fascinating biological and psychological consequences if humans had perfect memory.">
+<meta name="description" content="Imagine remembering every moment of your life. Explore the biological and psychological consequences if humans had perfect memory.">
 
 <style>
 
 body{
-font-family: 'Segoe UI', sans-serif;
 margin:0;
-background:linear-gradient(120deg,#0f2027,#203a43,#2c5364);
+font-family:Segoe UI, sans-serif;
+background:linear-gradient(120deg,#141e30,#243b55);
 color:white;
 line-height:1.7;
 }
 
+/* progress bar */
+
+#progressBar{
+position:fixed;
+top:0;
+left:0;
+height:5px;
+width:0%;
+background:#4cffd2;
+z-index:9999;
+}
+
+/* navigation */
+
+.navbar{
+position:sticky;
+top:0;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:10px 25px;
+background:#0f1b2d;
+z-index:1000;
+}
+
+.nav-links{
+display:flex;
+gap:12px;
+}
+
+.nav-links a{
+padding:8px 14px;
+background:#4cffd2;
+color:black;
+text-decoration:none;
+border-radius:6px;
+font-weight:bold;
+}
+
+.nav-links a:hover{
+background:#36c9a7;
+}
+
 header{
 text-align:center;
-padding:70px 20px;
+padding:80px 20px;
 }
 
 header h1{
-font-size:48px;
+font-size:46px;
 margin-bottom:10px;
 }
 
 header p{
-font-size:18px;
 opacity:0.8;
+font-size:18px;
 }
 
 .container{
@@ -44,7 +89,7 @@ margin-bottom:60px;
 }
 
 h2{
-border-left:6px solid #00e6e6;
+border-left:6px solid #4cffd2;
 padding-left:12px;
 margin-bottom:20px;
 }
@@ -59,25 +104,15 @@ gap:20px;
 background:rgba(255,255,255,0.05);
 padding:20px;
 border-radius:12px;
-backdrop-filter:blur(10px);
-transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-6px);
 background:rgba(255,255,255,0.1);
 }
 
 .highlight{
-background:#00e6e622;
-border-left:4px solid #00e6e6;
-padding:20px;
-border-radius:10px;
-}
-
-.fun-box{
-background:#ffcc0020;
-border-left:4px solid #ffcc00;
+background:#4cffd220;
+border-left:4px solid #4cffd2;
 padding:20px;
 border-radius:10px;
 }
@@ -89,8 +124,15 @@ border-radius:10px;
 margin-top:20px;
 }
 
+.fun-box{
+background:#ffd70025;
+border-left:4px solid #ffd700;
+padding:20px;
+border-radius:10px;
+}
+
 button{
-background:#00e6e6;
+background:#4cffd2;
 border:none;
 padding:12px 18px;
 border-radius:8px;
@@ -100,19 +142,46 @@ margin-top:15px;
 }
 
 button:hover{
-background:#00bfbf;
+background:#36c9a7;
 }
 
 footer{
 text-align:center;
-padding:30px;
-opacity:0.6;
+padding:40px 20px;
+opacity:0.8;
 }
 
 </style>
+
 </head>
 
 <body>
+
+<div id="progressBar"></div>
+
+<button id="themeToggle" onclick="toggleTheme()"
+style="position:fixed;top:10px;right:10px;border:none;border-radius:50%;padding:8px 10px;background:#4cffd2;font-size:16px;cursor:pointer;">
+🌙
+</button>
+
+<!-- Navigation -->
+
+<nav class="navbar">
+
+<img src="../Images/what-if.png" alt="What If Curious Minds Logo" style="width:45px;">
+
+<div class="nav-links">
+
+<a href="../index.html">🏠 Home</a>
+<a href="../space.html">🌌 Space</a>
+<a href="../physics.html">⚛️ Physics</a>
+<a href="../chemistry.html">🧪 Chemistry</a>
+<a href="../biology.html">🧬 Biology</a>
+<a href="../contact.html">📧 Contact</a>
+
+</div>
+
+</nav>
 
 <header>
 
@@ -131,12 +200,11 @@ opacity:0.6;
 <p>
 Forgetting is a natural part of being human. Our brains constantly filter information,
 keeping what seems important while letting go of small details.
-But imagine a world where your brain stored <b>every single moment</b> of your life.
 </p>
 
 <p>
-Every conversation. Every smell. Every face you saw in a crowd.
-Nothing would ever disappear from memory.
+But imagine a world where your brain stored <b>every single moment</b> of your life.
+Every conversation, every smell, every face in a crowd would remain forever.
 </p>
 
 </section>
@@ -149,26 +217,17 @@ Nothing would ever disappear from memory.
 
 <div class="card">
 <h3>🧬 Memory is Reconstructed</h3>
-<p>
-The brain does not store memories like a video recording.
-Instead, it rebuilds them using fragments of information.
-</p>
+<p>The brain does not store memories like a video recording. It rebuilds them using fragments of information.</p>
 </div>
 
 <div class="card">
 <h3>🧠 Brain Networks</h3>
-<p>
-Memories are stored across complex neural networks involving
-the hippocampus, cortex, and emotional centers.
-</p>
+<p>Memories are distributed across neural networks involving the hippocampus and cortex.</p>
 </div>
 
 <div class="card">
 <h3>📚 Learning Process</h3>
-<p>
-Forgetting actually helps learning by removing unnecessary
-information and strengthening useful memories.
-</p>
+<p>Forgetting helps learning by removing unnecessary information.</p>
 </div>
 
 </div>
@@ -183,16 +242,11 @@ information and strengthening useful memories.
 
 <p>
 A rare condition called <b>Hyperthymesia</b> allows some individuals to remember
-almost every day of their lives with extraordinary detail.
+nearly every day of their lives with extraordinary detail.
 </p>
 
 <p>
-They can recall events, conversations, and even what they were doing
-on random dates years in the past.
-</p>
-
-<p>
-However, even hyperthymesia is not true "perfect memory".
+They can recall events and experiences from specific dates years in the past.
 </p>
 
 </div>
@@ -203,17 +257,13 @@ However, even hyperthymesia is not true "perfect memory".
 
 <h2>What Scientists Don't Know</h2>
 
-<p>
-Scientists still debate whether the human brain has a strict
-limit to memory storage.
-</p>
+<p>Scientists still debate whether the brain has a strict storage limit.</p>
 
 <div class="fact">
 
-<b>Interesting Idea:</b>
-
-Some researchers believe the brain may theoretically store
-more information than we will ever experience during our lifetime.
+<b>Interesting Idea:</b>  
+Some researchers believe the brain could theoretically store more information
+than we will ever experience in our lifetime.
 
 </div>
 
@@ -227,26 +277,17 @@ more information than we will ever experience during our lifetime.
 
 <div class="card">
 <h3>🎓 Super Learning</h3>
-<p>
-Students could remember everything they ever studied,
-making education incredibly efficient.
-</p>
+<p>Students could remember everything they study.</p>
 </div>
 
 <div class="card">
 <h3>🔬 Scientific Progress</h3>
-<p>
-Researchers could recall every experiment, observation,
-and scientific detail instantly.
-</p>
+<p>Researchers could recall every experiment instantly.</p>
 </div>
 
 <div class="card">
 <h3>🧩 Mental Overload</h3>
-<p>
-The brain might struggle to manage an overwhelming
-amount of information.
-</p>
+<p>The brain might struggle with overwhelming information.</p>
 </div>
 
 </div>
@@ -258,17 +299,12 @@ amount of information.
 <h2>Psychological Effects</h2>
 
 <p>
-Perfect memory might not always be a gift.
+Forgetting helps humans heal emotionally.
+Painful memories slowly fade, allowing people to move forward.
 </p>
 
 <p>
-Humans rely on forgetting to heal emotionally.
-Painful memories fade over time, allowing people to move forward.
-</p>
-
-<p>
-If nothing could ever be forgotten, traumatic experiences
-might remain just as vivid decades later.
+With perfect memory, traumatic experiences might remain just as vivid decades later.
 </p>
 
 </section>
@@ -278,17 +314,11 @@ might remain just as vivid decades later.
 <h2>Did You Know?</h2>
 
 <div class="fact">
-
-🧠 The human brain contains around  
-<b>86 billion neurons</b> connected through trillions of synapses.
-
+🧠 The human brain contains about <b>86 billion neurons</b>.
 </div>
 
 <div class="fact">
-
-📊 Some estimates suggest the brain's storage capacity
-could be equivalent to several **petabytes** of data.
-
+📊 Some estimates suggest the brain could store several <b>petabytes</b> of information.
 </div>
 
 </section>
@@ -300,12 +330,11 @@ could be equivalent to several **petabytes** of data.
 <div class="fun-box">
 
 <p>
-Imagine arguing with a friend who has perfect memory.
+Imagine arguing with someone who has perfect memory.
 </p>
 
 <p>
-They could recall <b>exactly what you said</b>,
-what tone you used, and even the facial expression you made!
+They could recall <b>exactly what you said</b>, your tone, and your facial expression.
 </p>
 
 <p>
@@ -320,10 +349,7 @@ Winning arguments would become almost impossible.
 
 <h2>Try This Thought Experiment</h2>
 
-<p>
-Click the button below and imagine remembering
-every moment of your life right now.
-</p>
+<p>Click the button below and imagine remembering every moment of your life.</p>
 
 <button onclick="showMessage()">Activate Perfect Memory</button>
 
@@ -335,16 +361,68 @@ every moment of your life right now.
 
 <footer>
 
-<p>Biology "What If" Series • Exploring fascinating scientific possibilities</p>
+<p><b>What If Curious Minds</b></p>
+
+<p>
+📧
+<a href="mailto:learn.educationandstudy@gmail.com" style="color:#4cffd2;">
+learn.educationandstudy@gmail.com
+</a>
+</p>
+
+<p>
+<a href="https://youtube.com/@whatifcuriousmind" target="_blank">
+▶️ YouTube
+</a>
+</p>
+
+<p style="font-size:14px;">© 2026 What If Curious Minds</p>
 
 </footer>
 
 <script>
 
+/* progress bar */
+
+window.onscroll=function(){
+
+let winScroll=document.body.scrollTop||document.documentElement.scrollTop;
+let height=document.documentElement.scrollHeight-document.documentElement.clientHeight;
+let scrolled=(winScroll/height)*100;
+
+document.getElementById("progressBar").style.width=scrolled+"%";
+
+}
+
+/* theme toggle */
+
+function toggleTheme(){
+
+let body=document.body;
+let button=document.getElementById("themeToggle");
+
+if(body.style.background==="white"){
+
+body.style.background="linear-gradient(120deg,#141e30,#243b55)";
+body.style.color="white";
+button.innerHTML="🌙";
+
+}else{
+
+body.style.background="white";
+body.style.color="black";
+button.innerHTML="☀️";
+
+}
+
+}
+
+/* button interaction */
+
 function showMessage(){
 
 document.getElementById("message").innerHTML =
-"🧠 Imagine recalling every moment of your life instantly. Amazing... but maybe a little overwhelming!";
+"🧠 Imagine recalling every moment of your life instantly. Amazing... but maybe overwhelming!";
 
 }
 
